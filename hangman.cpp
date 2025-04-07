@@ -66,7 +66,7 @@ void mainGame() {
         chosenWord = "hangman";
     }
 
-    int wordLength = sizeof(chosenWord);
+    int wordLength = sizeof(chosenWord)-1;
     char currentWord[MAX_WORD_LENGTH];
     char guessedWord[MAX_WORD_LENGTH];
     char guessedChars[26];
