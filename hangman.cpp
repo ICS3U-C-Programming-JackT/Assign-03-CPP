@@ -4,11 +4,12 @@
 // Date: April 5, 2025
 // Hangman program in C++
 
+#include <string.h>
+#include <string>
 #include <cstdlib>
 #include <ctime>
 #include <fstream>
 #include <iostream>
-#include <string>
 
 const int STARTING_LIVES = 5;
 const char START_MSG[] = "Welcome to Jack's hangman game!";
@@ -65,7 +66,7 @@ void mainGame() {
         chosenWord = "hangman";
     }
 
-    int wordLength = std::strlen(chosenWord);
+    int wordLength = sizeof(chosenWord);
     char currentWord[MAX_WORD_LENGTH];
     char guessedWord[MAX_WORD_LENGTH];
     char guessedChars[26];
