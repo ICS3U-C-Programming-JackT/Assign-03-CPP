@@ -5,15 +5,16 @@
 // Hangman program in C++
 
 #include <string.h>
-#include <string>
+
 #include <cstdlib>
 #include <ctime>
 #include <fstream>
 #include <iostream>
+#include <string>
 
 const int STARTING_LIVES = 5;
 const char START_MSG[] = "Welcome to Jack's hangman game!";
-const bool OVERRIDE_WORD = true;
+const bool OVERRIDE_WORD = false;
 const int MAX_WORD_LENGTH = 20;
 const int MAX_WORDS = 5;
 
@@ -66,7 +67,7 @@ void mainGame() {
         chosenWord = "hangman";
     }
 
-    int wordLength = sizeof(chosenWord)-1;
+    int wordLength = strlen(chosenWord);
     char currentWord[MAX_WORD_LENGTH];
     char guessedWord[MAX_WORD_LENGTH];
     char guessedChars[26];
